@@ -1,5 +1,7 @@
 @import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Muli:600");
+@import url("fonts/tiempo_bold");
+@import url("fonts/avenir");
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -93,7 +95,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.75);
-		font-family: "Raleway", sans-serif;
+		font-family: "avenir", sans-serif;
 		font-size: 15pt;
 		font-weight: 100;
 		line-height: 1.75em;
@@ -140,6 +142,7 @@ input, select, textarea {
 		}
 
 	h2 {
+		font-family: "Muli", sans-serif;
 		font-size: 2em;
 		line-height: 1.5em;
 		letter-spacing: -0.025em;
