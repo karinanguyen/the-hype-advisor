@@ -3137,6 +3137,7 @@ input, select, textarea {
 
 		.spotlight.style1 .content {
 			border-color: #e44c65;
+			background-color: rgba(0, 0, 0, 0.8);
 		}
 
 		.spotlight.style2 .content {
@@ -3195,6 +3196,7 @@ input, select, textarea {
 
 	.wrapper {
 		padding: 6em 0 4em 0;
+		background: rgba(0, 0, 0, 0.3)
 	}
 
 		.wrapper.style2 {
@@ -3449,7 +3451,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/travis_af1.gif");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -3468,10 +3470,10 @@ input, select, textarea {
 		}
 
 		#banner:after {
-			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/overlay.png");;
+			background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/overlay.png");;
+			background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/overlay.png");;
+			background-image: linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/overlay.png");;
 			content: '';
 			display: block;
 			height: 100%;
@@ -3529,7 +3531,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #272833;
+		background: rgba(0, 0, 0, 1);
 		padding: 6em 0;
 		text-align: center;
 	}
