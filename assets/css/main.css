@@ -79,7 +79,7 @@ input, select, textarea {
 	}
 
 	html, body {
-		background: #1c1d26;
+		background: #161414;
 	}
 
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3196,7 +3196,6 @@ input, select, textarea {
 
 	.wrapper {
 		padding: 6em 0 4em 0;
-		background: rgba(0, 0, 0, 0.3)
 	}
 
 		.wrapper.style2 {
@@ -3531,7 +3530,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: rgba(0, 0, 0, 1);
+		background: #161414;
 		padding: 6em 0;
 		text-align: center;
 	}
