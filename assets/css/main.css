@@ -3099,7 +3099,7 @@ input, select, textarea {
 		}
 
 		.spotlight.style1 .content {
-			border-color: #e44c65;
+			border-color: #d13c3c;
 			background-color: rgba(0, 0, 0, 0.8);
 		}
 
@@ -3162,7 +3162,7 @@ input, select, textarea {
 	}
 
 		.wrapper.style2 {
-			background: #e44c65;
+			background: #d13c3c;
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
