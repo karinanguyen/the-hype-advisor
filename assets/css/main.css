@@ -3447,16 +3447,17 @@ input, select, textarea {
 
 		#banner .content {
 			display: inline-block;
-			margin-right: 1%;
 			max-width: 95%;
-			padding: 3em;
+			padding: 0em;
 			position: relative;
-			text-align: right;
-			vertical-align: middle;
+			text-align: center;
+			vertical-align: left;
 			z-index: 1;
 		}
 
 			#banner .content header {
+				padding-left: 5%;
+				text-align: right;
 				display: inline-block;
 				vertical-align: middle;
 			}
@@ -3475,7 +3476,7 @@ input, select, textarea {
 			#banner .content .image {
 				display: inline-block;
 				/*max-width: 45%;*/
-				max-width: 55%;
+				max-width: 48%;
 			    height: auto;
 			    width: auto;
 				margin-left: 0em;
