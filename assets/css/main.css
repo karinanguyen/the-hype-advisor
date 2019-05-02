@@ -101,6 +101,10 @@ input, select, textarea {
 		line-height: 1.75em;
 	}
 
+	ul li ul li a {
+	    text-decoration:none;
+	}​
+	
 	a {
 		-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -3464,7 +3468,7 @@ input, select, textarea {
 
 				#banner .content header h2 {
 					font-size: 2.5em;
-					line-height: 1.2;
+					line-height: 1.1;
 					margin: 0;
 				}
 
@@ -3475,10 +3479,10 @@ input, select, textarea {
 
 			#banner .content .image {
 				display: inline-block;
-				height: 18em;
-				margin-left: 3em;
+				height: 20em;
+				margin-left: 0em;
 				vertical-align: middle;
-				width: 18em;
+				width: 30em;
 			}
 
 				#banner .content .image img {
