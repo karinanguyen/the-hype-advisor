@@ -3474,10 +3474,11 @@ input, select, textarea {
 
 			#banner .content .image {
 				display: inline-block;
-				height: 20em;
+				max-width: 50%;
+			    height: auto;
+			    width: auto;
 				margin-left: 0em;
 				vertical-align: middle;
-				width: 35em;
 			}
 
 				#banner .content .image img {
