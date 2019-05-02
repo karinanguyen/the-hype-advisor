@@ -3474,7 +3474,8 @@ input, select, textarea {
 
 			#banner .content .image {
 				display: inline-block;
-				max-width: 45%;
+				/*max-width: 45%;*/
+				max-width: 55%;
 			    height: auto;
 			    width: auto;
 				margin-left: 0em;
