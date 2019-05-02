@@ -104,7 +104,7 @@ input, select, textarea {
 	ul li ul li a {
 	    text-decoration:none;
 	}​
-	
+
 	a {
 		-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -3479,10 +3479,10 @@ input, select, textarea {
 
 			#banner .content .image {
 				display: inline-block;
-				height: 20em;
+				height: 350px;
 				margin-left: 0em;
 				vertical-align: middle;
-				width: 30em;
+				width: 500px;
 			}
 
 				#banner .content .image img {
