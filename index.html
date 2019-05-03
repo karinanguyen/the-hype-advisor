@@ -7,6 +7,69 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	    <script type="text/javascript">
+			google.charts.load('current', {'packages':['line', 'corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+			function drawChart() {
+				var chartDiv = document.getElementById('chart_div');
+
+				var data = new google.visualization.DataTable();
+				data.addColumn('date', 'Month');
+				data.addColumn('number', "Apple Stock Price");
+				data.addColumn('number', "OW AF1 Volt Selling Price");
+
+				data.addRows([
+				[new Date(2014, 0),  -.5,  5.7],
+				[new Date(2014, 1),   .4,  8.7],
+				[new Date(2014, 2),   .5,   12],
+				[new Date(2014, 3),  2.9, 15.3],
+				[new Date(2014, 4),  6.3, 18.6],
+				[new Date(2014, 5),    9, 20.9],
+				[new Date(2014, 6), 10.6, 19.8],
+				[new Date(2014, 7), 10.3, 16.6],
+				[new Date(2014, 8),  7.4, 13.3],
+				[new Date(2014, 9),  4.4,  9.9],
+				[new Date(2014, 10), 1.1,  6.6],
+				[new Date(2014, 11), -.2,  4.5]
+				]);
+
+				var classicOptions = {
+					title: 'Price Companison: AAPL vs. Off-White Nike AF1 (Volt)',
+					width: 450,
+					height: 250,
+					// Gives each series an axis that matches the vAxes number below.
+					series: {
+						0: {targetAxisIndex: 0},
+						1: {targetAxisIndex: 1}
+					},
+					vAxes: {
+						// Adds titles to each axis.
+						0: {title: 'Sold Listing of Shoe (USD)'},
+						1: {title: 'Stock Price (USD)'}
+					},
+					hAxis: {
+						ticks: [new Date(2014, 0), new Date(2014, 1), new Date(2014, 2), new Date(2014, 3),
+						new Date(2014, 4),  new Date(2014, 5), new Date(2014, 6), new Date(2014, 7),
+						new Date(2014, 8), new Date(2014, 9), new Date(2014, 10), new Date(2014, 11)
+						]
+					},
+					vAxis: {
+						viewWindow: {
+							max: 30
+						}
+					}
+				};
+
+				function drawClassicChart() {
+					var classicChart = new google.visualization.LineChart(chartDiv);
+					classicChart.draw(data, classicOptions);
+				}
+
+				drawClassicChart();
+			}
+	    </script>
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
@@ -138,21 +201,22 @@
 							<h2>The Industry</h2>
 							<p>The potential in streetwear investment.</p>
 						</header>
-
 						<p align="left">
-						<span class="image left"><img src="images/black_bogo.gif" alt="" /></span>
-						<span>The streetwear industry is a multi-billion industry, with the resell market itself currently valued at <b>$2 billion</b> (per <a href = "https://www.businessinsider.com/most-expensive-sneakers-sold-last-year-resale-2019-4" target="_blank">Business Insider)</a>. This number is only growing at an exponential rate: it is projected to hit <b>$6 billion by 2025</b>. <b>Start investing now, you won’t regret it</b>. 
-
-						For a glimpse at our profits or the growth of the market, click the following: 
+						<span class="image left" id="chart_div"></span>
+						The streetwear industry is a multi-billion industry, with the resell market itself currently valued at <b>$2 billion</b> (per <a href = "https://www.businessinsider.com/most-expensive-sneakers-sold-last-year-resale-2019-4" target="_blank">Business Insider)</a>. This number is only growing at an exponential rate: it is projected to hit <b>$6 billion by 2025</b>. <b>Start investing now, you won’t regret it</b>.
 						</br>
 						</br>
-							<a class="button">Our Track Record</a>
-							<a class="button">Statistics</a>
+						Ultimately, the streetwear market is <b>more predictable, less volatile</b>, and thus has a <b>greater potential</b> for guaranteed profits. 
 						</br>
 						</br>
-						Ultimately, the streetwear market is <b>more predictable, less volatile</b>, and thus has a <b>greater potential</b> for guaranteed profits.
-						</span>
+						For a glimpse at our profits or the growth of the market, click the buttons below.
 						</p>
+						</br>
+						</br>
+					</div>
+					<div>
+						<a class="button">Our Track Record</a>
+						<a class="button">Statistics</a>
 					</div>
 				</section>
 
