@@ -1,4 +1,4 @@
-var myData = "date,Stock,Shoe\n20181201,184.82,407.00\n20190101,127.92,380.00\n20190201,166.52,421.00\n20190301,174.97,492.00\n20190401,191.24,664.00\n20190501,210.52,700.00\n";
+var myData = "date,Stock,Shoe\n20181219,160.89,388.00\n20181224,146.83,353.00\n20181226,157.17,369.00\n20190102,157.92,379.00\n20190103,142.19,382.00\n20190104,148.26,380.00\n20190129,154.68,410.00\n20190205,174.18,431.00\n20190308,172.91,515.00\n20190321,195.09,595.00\n20190326,186.79,613.00\n20190411,198.95,698.00\n20190416,199.25,688.00\n20190421,204.53,730.00\n20190423,207.48,684.00\n20190430,204.61,685.00\n20190501,200.67,700.00\n20190502,209.15,705.00\n20190503,211.75,700.00\n";
 
 // var myData = `date\tNew York\tSan Francisco\tAustin\n
 // 20111001\t63.4\t62.7\t72.2\n
@@ -61,7 +61,7 @@ var line = d3.svg.line()
         return y(d.price);
     });
 
-var svg = d3.select("#graph").append("svg")
+var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .style("fill", "white")
@@ -155,7 +155,7 @@ svg.append("g")
     .attr("y", 6)
     .attr("dy", ".71em")
     .style("text-anchor", "end")
-    .text("Price (USD): AAPL Stock vs. O-W AF1 Sale Price");
+    .text("Price (USD): AAPL Stock vs. Off-White Air Force 1 (Volt)");
 
 var city = svg.selectAll(".city")
     .data(cities)
