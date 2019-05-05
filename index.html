@@ -8,243 +8,250 @@
 		<link rel="stylesheet" href="assets/css/main.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	    <script type="text/javascript">
-			google.charts.load('current', {'packages':['line', 'corechart']});
-			google.charts.setOnLoadCallback(drawChart);
-
-			function drawChart() {
-				var chartDiv = document.getElementById('chart_div');
-
-				var data = new google.visualization.DataTable();
-				data.addColumn('date', 'Month');
-				data.addColumn('number', "Apple Stock Price");
-				data.addColumn('number', "OW AF1 Volt Selling Price");
-
-				data.addRows([
-				[new Date(2019, 0),  184.82, 391.00],
-				[new Date(2019, 0.5),  165.48, 391.00],
-				[new Date(2019, 1),  127.92, 380.00],
-				[new Date(2019, 2),  166.52,  421.00],
-				[new Date(2019, 3), 174.97,  492.00],
-				[new Date(2019, 4), 191.24,  664.00],
-				[new Date(2019, 5), 210.52,  700.00]
-				]);
-
-				var classicOptions = {
-					title: 'Apple Stock vs. Off-White Nike AF1 (Volt)',
-					width: 500,
-					height: 250,
-					// Gives each series an axis that matches the vAxes number below.
-					series: {
-						0: {targetAxisIndex: 0},
-						1: {targetAxisIndex: 1}
-					},
-					vAxes: {
-						// Adds titles to each axis.
-						0: {title: 'Sold Listing of Shoe (USD)'},
-						1: {title: 'AAPL Stock Price (USD)'}
-					},
-					hAxis: {
-						ticks: [new Date(2019, 0), new Date(2019, 0.5),new Date(2019, 1), new Date(2019, 2), new Date(2019, 3), new Date(2019, 4),  new Date(2019, 5)]
-					},
-					vAxis: {
-						viewWindow: {
-							max: 750
-						}
-					}
-				};
-
-				function drawClassicChart() {
-					var classicChart = new google.visualization.LineChart(chartDiv);
-					classicChart.draw(data, classicOptions);
-				}
-
-				drawClassicChart();
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+		<style>
+			svg {
+				font-size: 10px;
 			}
-	    </script>
+			.axis path,
+			.axis line {
+				fill: none;
+				stroke: #FFFFFF;
+				shape-rendering: crispEdges;
+			}
+			.x.axis path {
+				display: none;
+			}
+			.line {
+				fill: none;
+				stroke: steelblue;
+				stroke-width: 1.5px;
+			}
+		</style>
+		<!-- 	    <script type="text/javascript">
+				google.charts.load('current', {'packages':['line', 'corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
+					var chartDiv = document.getElementById('chart_div');
+					var data = new google.visualization.DataTable();
+					data.addColumn('date', 'Month');
+					data.addColumn('number', "Apple Stock Price");
+					data.addColumn('number', "OW AF1 Volt Selling Price");
+					data.addRows([
+					[new Date(2019, 0),  184.82, 391.00],
+					[new Date(2019, 0.5),  165.48, 391.00],
+					[new Date(2019, 1),  127.92, 380.00],
+					[new Date(2019, 2),  166.52,  421.00],
+					[new Date(2019, 3), 174.97,  492.00],
+					[new Date(2019, 4), 191.24,  664.00],
+					[new Date(2019, 5), 210.52,  700.00]
+					]);
+					var classicOptions = {
+						title: 'Apple Stock vs. Off-White Nike AF1 (Volt)',
+						width: 500,
+						height: 250,
+						// Gives each series an axis that matches the vAxes number below.
+						series: {
+							0: {targetAxisIndex: 0},
+							1: {targetAxisIndex: 1}
+						},
+						vAxes: {
+							// Adds titles to each axis.
+							0: {title: 'Sold Listing of Shoe (USD)'},
+							1: {title: 'AAPL Stock Price (USD)'}
+						},
+						hAxis: {
+							ticks: [new Date(2019, 0), new Date(2019, 0.5),new Date(2019, 1), new Date(2019, 2), new Date(2019, 3), new Date(2019, 4),  new Date(2019, 5)]
+						},
+						vAxis: {
+							viewWindow: {
+								max: 750
+							}
+						}
+					};
+					function drawClassicChart() {
+						var classicChart = new google.visualization.LineChart(chartDiv);
+						classicChart.draw(data, classicOptions);
+					}
+					drawClassicChart();
+				}
+		</script> -->
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
-
 			<!-- Header -->
-				<header id="header">
-					<h1 id="logo">
-							<a href="#" >
-								<img src="images/letter_logo.png" alt="" style="float:right;height:40px; margin: 10px 0px" /> 
-							</a>
-						</h1>
-					<nav id="nav">
-						<ul>
-							<li>
-								<a href="#">About</a>
-								<ul>
-									<li><a href="#story" class="scrolly">Our Story</a></li>
-									<li><a href="#service" class="scrolly">Our Service</a></li>
-									<li><a href="#industry" class="scrolly">The Industry</a></li>
-									<li><a href="#why" class="scrolly">Why Us</a></li>
-									<!-- 
-									<li>
+			<header id="header">
+				<h1 id="logo">
+				<a href="#" >
+					<img src="images/letter_logo.png" alt="" style="float:right;height:40px; margin: 10px 0px" />
+				</a>
+				</h1>
+				<nav id="nav">
+					<ul>
+						<li>
+							<a href="#">About</a>
+							<ul>
+								<li><a href="#story" class="scrolly">Our Story</a></li>
+								<li><a href="#service" class="scrolly">Our Service</a></li>
+								<li><a href="#industry" class="scrolly">The Industry</a></li>
+								<li><a href="#why" class="scrolly">Why Us</a></li>
+								<!--
+								<li>
 										<a href="#">Submenu</a>
 										<ul>
-											<li><a href="#">Option 1</a></li>
-											<li><a href="#">Option 2</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
+												<li><a href="#">Option 1</a></li>
+												<li><a href="#">Option 2</a></li>
+												<li><a href="#">Option 3</a></li>
+												<li><a href="#">Option 4</a></li>
 										</ul>
-									</li>
-									-->
-								</ul>
-							</li>
-							<li><a href="#form">Contact Us</a></li>
-							<li><a href="#">Log In</a></li>
-							<li><a href="#form" class="button primary">Sign Up</a></li>
-	
-						</ul>
-					</nav>
-				</header>
-
+								</li>
+								-->
+							</ul>
+						</li>
+						<li><a href="#form">Contact Us</a></li>
+						<li><a href="#">Log In</a></li>
+						<li><a href="#form" class="button primary">Sign Up</a></li>
+						
+					</ul>
+				</nav>
+			</header>
 			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
+			<section id="banner">
+				<div class="content">
+					<header>
+						<h2>
+						Turn your passion to profit,<br> without all of the work.</br></h2>
+						<p>
+							Join The Hype Fund by The Hype Advisor</br>
+							<img src="images/new_logo_no_border.png" alt="" style="float:center;height:8em;padding:1%;" />
+							<!-- <img src="images/graphic_no_border.png" alt="" style="float:right;height:300px;" /> -->
+						</p>
+					</header>
+					<a href="#service" class="scrolly">
+						<span class="image">
+							<!-- <img src="images/new_logo_no_border.png" alt="" /> -->
+							<img src="images/graphic_no_border.png" alt="" />
+						</span>
+					</a>
+				</div>
+				<a href="#story" class="goto-next scrolly">Next</a>
+			</section>
+			<!-- Body -->
+			<section id="story" class="spotlight style1 right">
+				<span class="image fit main"><img src="images/travis_af1.gif" alt=""/></span>
+				<div class="content">
+					<div class="col-4 col-12-medium">
 						<header>
-							<h2>
-							Turn your passion to profit,<br> without all of the work.</br></h2>
-							<p>
-								Join The Hype Fund by The Hype Advisor</br>
-								<img src="images/new_logo_no_border.png" alt="" style="float:center;height:8em;padding:1%;" /> 
-								<!-- <img src="images/graphic_no_border.png" alt="" style="float:right;height:300px;" /> -->
-							</p>
+							<h2>Our Story</h2>
+							<p>Who is "The Hype Advisor?"</p>
 						</header>
-						<a href="#service" class="scrolly">
-							<span class="image">
-								<!-- <img src="images/new_logo_no_border.png" alt="" /> -->
-									<img src="images/graphic_no_border.png" alt="" />
-							</span>
-						</a>
 					</div>
-					<a href="#story" class="goto-next scrolly">Next</a>
-				</section>
-
-				<!-- Body -->
-				<section id="story" class="spotlight style1 right">
-					<span class="image fit main"><img src="images/travis_af1.gif" alt=""/></span>
-					<div class="content">
-						<div class="col-4 col-12-medium">
-							<header>
-								<h2>Our Story</h2>
-								<p>Who is "The Hype Advisor?"</p>
-							</header>
-						</div>
-						<div class="col-4 col-12-medium">
-							<p>
+					<div class="col-4 col-12-medium">
+						<p>
 							We are a team of streetwear enthusiasts who have been passionate about the world of hype for as long as we can remember. However, streetwear is an expensive hobby: as our closets got fuller, our wallets got thinner. <b>We needed to a way to fund our passion</b>.
 							</br>
 							</br>
 							About five years ago, we discovered <b>reselling</b>: by buying certain items for the low, waiting for a calculated period of time, and selling them high, we are able to profit. With that money, we could finally buy <b>whatever we wanted, whenever we wanted</b>.
-							</p>
-						</div>
+						</p>
 					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
-
-				<section id= "two" class="spotlight style1 left">
-					<span class="image fit main"><img src="images/bape.gif" alt="" /></span>
-					<div class="content">
-						<div class="col-4 col-12-medium">
-							<header>
-								<h2>The Hype Fund</h2>
-								<p>Our expertise, now in your hands.</p>
-							</header>
-							<p>
-							Five years later, here we are. Reselling allows us to make more money than we could have ever imagined. With our knowledge navigating the streetwear market, as well as prediction models with <b>data science</b> and <b>artificial intelligence</b>, we accurately predict and obtain the items are going to appreciate in value. 
+				</div>
+				<a href="#two" class="goto-next scrolly">Next</a>
+			</section>
+			<section id= "two" class="spotlight style1 left">
+				<span class="image fit main"><img src="images/bape.gif" alt="" /></span>
+				<div class="content">
+					<div class="col-4 col-12-medium">
+						<header>
+							<h2>The Hype Fund</h2>
+							<p>Our expertise, now in your hands.</p>
+						</header>
+						<p>
+							Five years later, here we are. Reselling allows us to make more money than we could have ever imagined. With our knowledge navigating the streetwear market, as well as prediction models with <b>data science</b> and <b>artificial intelligence</b>, we accurately predict and obtain the items are going to appreciate in value.
 							</br>
 							</br>
 							<b>We want to bring our experience to you.</b> We know that getting into reselling is very difficult, and the steep learning curve has driven many people away. Our goal is to <b>streamline the process</b> and make it <b>accessible to all</b> and is the foundation of <b><i>The Hype Fund</i></b> by <b><i>The Hype Advisor.</i></b>
-							</p>
-						</div>
+						</p>
 					</div>
-					<a href="#service" class="goto-next scrolly">Next</a>
-				</section>
-
-				<section id="service" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Our Service</h2>
-							<p>A clothing and sneaker-based hedgefund with no barriers to entry.</p>
-						</header>
-						<p align="left">
-						We are an <b>investing service for streetwear</b> based around reselling. You invest money into us, and we put your capital in the streetwear market. Using our <b>connections</b>, <b>extensive knowledge</b>, and <b>AI models and data analytics</b>, we buy items that we predict to be <b>bullish</b>: they increase in resale over time. 
+				</div>
+				<a href="#service" class="goto-next scrolly">Next</a>
+			</section>
+			<section id="service" class="wrapper style2 special fade">
+				<div class="container">
+					<header>
+						<h2>Our Service</h2>
+						<p>A clothing and sneaker-based hedgefund with no barriers to entry.</p>
+					</header>
+					<p align="left">
+						We are an <b>investing service for streetwear</b> based around reselling. You invest money into us, and we put your capital in the streetwear market. Using our <b>connections</b>, <b>extensive knowledge</b>, and <b>AI models and data analytics</b>, we buy items that we predict to be <b>bullish</b>: they increase in resale over time.
 						</br>
 						</br>
 						When we sell the items, we transfer the selling price directly to your PayPal account, minus a small 15% commission fee. During the rare occurrence that the items depreciate, <b>we cover 100% of the loss.</b>
-						</p>
-
-						<div class="box alt">
-							<div class="row gtr-50 gtr-uniform">
-								<div class="col-12"><span class="image fit"><img src="images/service.png" alt="" /></span></div>
-							</div>
+					</p>
+					<div class="box alt">
+						<div class="row gtr-50 gtr-uniform">
+							<div class="col-12"><span class="image fit"><img src="images/service.png" alt="" /></span></div>
 						</div>
 					</div>
-				</section>
-
-				<section id="industry" class="wrapper style1 special fade">
-					<div class="container">
-						<header>
-							<h2>The Industry</h2>
-							<p>The potential in streetwear investment.</p>
-						</header>
-						<p align="left">
-						<span class="left" id="chart_div"></span>
+				</div>
+			</section>
+			<section id="industry" class="wrapper style1 special fade">
+				<div class="container">
+					<header>
+						<h2>The Industry</h2>
+						<p>The potential in streetwear investment.</p>
+					</header>
+					<p align="left">
+						<!-- <span class="left" id="chart_div"></span> -->
+						<span id="graph" class="left">
+							
+						</span>
 						The streetwear industry is a multi-billion industry, with the resell market itself currently valued at <b>$2 billion</b> (per <a href = "https://www.businessinsider.com/most-expensive-sneakers-sold-last-year-resale-2019-4" target="_blank">Business Insider)</a>. This number is only growing at an exponential rate: it is projected to hit <b>$6 billion by 2025</b>. <b>Start investing now, you won’t regret it</b>.
 						</br>
 						</br>
-						Ultimately, the streetwear market is <b>more predictable, less volatile</b>, and thus has a <b>greater potential</b> for guaranteed profits. 
+						Ultimately, the streetwear market is <b>more predictable, less volatile</b>, and thus has a <b>greater potential</b> for guaranteed profits.
 						</br>
 						</br>
 						For a glimpse at our profits or the growth of the market, click the buttons below.
-						</p>
 						</br>
-					</div>
-					<div>
 						<a class="button">Our Track Record</a>
 						<a class="button">Statistics</a>
-					</div>
-				</section>
-
-				<section id="why" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Why Believe In Us?</h2>
-							<p>No risk. Better profits.</p>
-						</header>
-						<ul align="left">
-						  <li>
-						  There are massive amounts of money to be made in the streetwear market. As long as the resell market is up, <b>we will be profitable.</b>
-						  </li>
-						  <li>
-						  Successful resellers must camp outside stores overnight, spend thousands of dollars on bots, and wake up before the sun rises to catch releases in order to make their money. <b>You can bypass all of that with a click of a button.</b>
-						  </li>
-						  <li>
-						  <b>There is no risk.</b> Since the streetwear market is so non-volatile, we can afford to cover for the potential losses. As a result, you will never lose ANY of money you put in.
-						  </li>
-						  <li>
-						  It is okay to start small! There is absolutely no pressure. Our service combines our clients’ capital so that anyone can contribute, <b>regardless of the amount.</b>
-						  </li>
-						  <li>
-						  If you want the latest Nike collaboration or the latest piece from Palace but don’t have the budget to spend, <b>the best way to save up and grow your funds is through us.</b> The Hype Fund is made for streetwear enthusiasts like you and us.
-						  </li>
-						</ul>
-						<!--
-						<div class="box alt">
+					</p>
+					</br>
+				</div>
+			</section>
+			<section id="why" class="wrapper style2 special fade">
+				<div class="container">
+					<header>
+						<h2>Why Believe In Us?</h2>
+						<p>No risk. Better profits.</p>
+					</header>
+					<ul align="left">
+						<li>
+							There are massive amounts of money to be made in the streetwear market. As long as the resell market is up, <b>we will be profitable.</b>
+						</li>
+						<li>
+							Successful resellers must camp outside stores overnight, spend thousands of dollars on bots, and wake up before the sun rises to catch releases in order to make their money. <b>You can bypass all of that with a click of a button.</b>
+						</li>
+						<li>
+							<b>There is no risk.</b> Since the streetwear market is so non-volatile, we can afford to cover for the potential losses. As a result, you will never lose ANY of money you put in.
+						</li>
+						<li>
+							It is okay to start small! There is absolutely no pressure. Our service combines our clients’ capital so that anyone can contribute, <b>regardless of the amount.</b>
+						</li>
+						<li>
+							If you want the latest Nike collaboration or the latest piece from Palace but don’t have the budget to spend, <b>the best way to save up and grow your funds is through us.</b> The Hype Fund is made for streetwear enthusiasts like you and us.
+						</li>
+					</ul>
+					<!--
+					<div class="box alt">
 							<div class="row gtr-50 gtr-uniform">
-								<div class="col-4 col-6-xsmall"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4 col-6-xsmall"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4 col-6-xsmall"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+									<div class="col-4 col-6-xsmall"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+									<div class="col-4 col-6-xsmall"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+									<div class="col-4 col-6-xsmall"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
 							</div>
-						</div>
+					</div>
 					-->
 				</section>
-
 				<section id="five" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
@@ -272,7 +279,6 @@
 						</div>
 					</div>
 				</section>
-
 				<section id="form" class="wrapper style2 special fade">
 					<div class="container">
 						<header>
@@ -285,15 +291,14 @@
 								<!--
 								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
 								<div class="col-4 col-12-xsmall">
-									<input type="submit" value="Get Started" class="fit primary" />
+										<input type="submit" value="Get Started" class="fit primary" />
 								</div>
 								-->
 							</div>
 						</form>
 					</div>
 				</section>
-
-			<!-- Footer -->
+				<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
 						<li><a href="http://intagram.com/thehypeadvisor" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
@@ -303,10 +308,8 @@
 						<li>&copy; The Hype Advisor.</li><li>Built by: <a href="http://m1ch43lw4ng.com">Michael Wang</a></li><li>Last Updated: May 3, 2019</li>
 					</ul>
 				</footer>
-
-		</div>
-
-		<!-- Scripts -->
+			</div>
+			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
@@ -315,6 +318,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+			<script type="text/javascript" src="script.js"></script>
+		</body>
+	</html>
