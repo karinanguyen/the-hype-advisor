@@ -3342,8 +3342,7 @@ input, select, textarea {
 	}
 
 	#header {
-		background: rgba(39, 40, 51, 0.965);
-		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+		background: rgba(0, 0, 0, 0);
 		cursor: default;
 		height: 3.5em;
 		left: 0;
