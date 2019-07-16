@@ -24,12 +24,12 @@ var myData = "date,1x AAPL,2x AAPL,1x OW AF1\n20181219,160.89,321.78,388.00\n201
 // 20111021\t55.6\t56.4\t64.3\n
 // 20111022\t54.4\t60.7\t72.4\n`;
 var default_width = 600;
-var default_height = 300;
+var default_height = 260;
 var default_ratio = default_width / default_height;
 
 var margin = {
         top: 10,
-        right: 80,
+        right: 50,
         bottom: 30,
         left: 30
     },
@@ -38,7 +38,7 @@ var margin = {
 
 function scale() {
   current_width = Math.min(600, window.innerWidth * 0.97);
-  current_height = 300;
+  current_height = 260;
 
   current_ratio = current_width / current_height;
 
