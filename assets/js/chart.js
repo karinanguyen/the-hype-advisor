@@ -23,15 +23,45 @@ var myData = "date,1x AAPL,2x AAPL,1x OW AF1\n20181219,160.89,321.78,388.00\n201
 // 20111020\t65.1\t57.2\t57.4\n
 // 20111021\t55.6\t56.4\t64.3\n
 // 20111022\t54.4\t60.7\t72.4\n`;
+var default_width = 600;
+var default_height = 300;
+var default_ratio = default_width / default_height;
 
+// Current (non-responsive) width and height are calcuated from the default, minus the margins
 var margin = {
         top: 10,
         right: 80,
         bottom: 30,
         left: 30
     },
-    width = 500 - margin.left - margin.right,
-    height = 250 - margin.top - margin.bottom;
+    width = default_width - margin.left - margin.right,
+    height = default_height - margin.top - margin.bottom;
+
+// Determine current size, which determines vars
+function set_vars() {
+  //alert('setting vars')
+  current_width = Math.min(600, window.innerWidth * 0.97);
+  current_height = 300;
+
+  current_ratio = current_width / current_height;
+
+  // Check if height is limiting factor
+  if ( current_ratio > default_ratio ){
+    h = current_height;
+    w = h * default_ratio;
+  // Else width is limiting
+  } else {
+    w = current_width;
+    h = w / default_ratio;
+  }
+
+  // Set new width and height based on graph dimensions
+  width = w - margin.left - margin.right;
+  height = h - margin.top - margin.bottom;
+
+};
+
+set_vars();
 
 var parseDate = d3.time.format("%Y%m%d").parse;
 
