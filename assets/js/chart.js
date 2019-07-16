@@ -27,7 +27,6 @@ var default_width = 600;
 var default_height = 300;
 var default_ratio = default_width / default_height;
 
-// Current (non-responsive) width and height are calcuated from the default, minus the margins
 var margin = {
         top: 10,
         right: 80,
@@ -37,31 +36,26 @@ var margin = {
     width = default_width - margin.left - margin.right,
     height = default_height - margin.top - margin.bottom;
 
-// Determine current size, which determines vars
-function set_vars() {
-  //alert('setting vars')
+function scale() {
   current_width = Math.min(600, window.innerWidth * 0.97);
   current_height = 300;
 
   current_ratio = current_width / current_height;
 
-  // Check if height is limiting factor
   if ( current_ratio > default_ratio ){
     h = current_height;
     w = h * default_ratio;
-  // Else width is limiting
   } else {
     w = current_width;
     h = w / default_ratio;
   }
 
-  // Set new width and height based on graph dimensions
   width = w - margin.left - margin.right;
   height = h - margin.top - margin.bottom;
 
 };
 
-set_vars();
+scale();
 
 var parseDate = d3.time.format("%Y%m%d").parse;
 
