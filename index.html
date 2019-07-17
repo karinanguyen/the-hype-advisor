@@ -5,7 +5,8 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.3/dist/bootstrap-table.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.3/dist/bootstrap-table.min.css"/>
+		<link rel="stylesheet" href="assets/css/chart.css"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -164,21 +165,29 @@
 						<a class="button" onclick = "trackRecord()">Track Record</a>
 						<a class="button" onclick = "marketComparison()">Market Comparisons</a>
 						<div id="button_text" align="left"></div>
+
 						<script>
+						function reloadJS() {
+							var head = document.getElementsByTagName('head')[0];
+							var script = document.createElement('script');
+							script.src = 'assets/js/jquery.sortable.min.js';
+							head.appendChild(script);
+						}
+
 						var nothing = "";
 						var text1 = 
 						'<div style="overflow-x:auto;">\
 							<table id="flips_table" class="table"> \
 						        <thead>\
 							      <tr>\
-							        <th>Item Name</th>\
-							        <th>Number Bought</th>\
+							        <th>Item Name ↑↓</th>\
+							        <th>Number Bought ↑↓</th>\
 							        <th>Buy Date</th>\
 							        <th>Buy Price (avg)</th>\
 							        <th>Sell Date</th>\
 									<th>Sell Price (avg)</th>\
-									<th>Hold Period<>\
-							        <th>Profit / Loss</th>\
+									<th>Hold Period ↑↓</th>\
+							        <th>Profit / Loss ↑↓</th>\
 							      </tr>\
 							    </thead>\
 							    <tbody>\
@@ -214,29 +223,32 @@
 							      </tr>\
 							    </tbody>\
 						    </table>\
-						</div>';
+						</div>'
+						;
 						var text2 = "text2text2text2text2text2text2text2text2text2text2";
 
 						function trackRecord() {
-						  var x = document.getElementById("button_text");
-						  var temp = document.createElement("div");
-						  temp.innerHTML = x.innerHTML;
-						  if (temp.textContent || temp.innerText || "" === text1) {
-						    x.innerHTML = nothing;
-						  } else {
-						    x.innerHTML = text1;
-						  }
+							var x = document.getElementById("button_text");
+							var temp = document.createElement("div");
+							temp.innerHTML = x.innerHTML;
+							if (temp.textContent || temp.innerText || "" === text1) {
+								x.innerHTML = nothing;
+							} else {
+								x.innerHTML = text1;
+							}
+							reloadJS();
 						}
 
 						function marketComparison() {
-						  var x = document.getElementById("button_text");
-						  var temp = document.createElement("div");
-						  temp.innerHTML = x.innerHTML;
-						  if (temp.textContent || temp.innerText || "" === text2) {
-						    x.innerHTML = nothing;
-						  } else {
-						    x.innerHTML = text2;
-						  }
+							var x = document.getElementById("button_text");
+							var temp = document.createElement("div");
+							temp.innerHTML = x.innerHTML;
+							if (temp.textContent || temp.innerText || "" === text2) {
+								x.innerHTML = nothing;
+							} else {
+								x.innerHTML = text2;
+							}
+							reloadJS();
 						}
 						</script>
 						</br>
@@ -390,6 +402,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	    <script src="https://unpkg.com/bootstrap-table@1.15.3/dist/bootstrap-table.min.js"></script>
+	    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	    <script src="assets/js/jquery.sortable.min.js"></script>
 		<!-- 	    <script type="text/javascript">
 				google.charts.load('current', {'packages':['line', 'corechart']});
 				google.charts.setOnLoadCallback(drawChart);
