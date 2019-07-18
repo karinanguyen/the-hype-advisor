@@ -24,12 +24,12 @@ var myData = "date,1x AAPL,2x AAPL,1x OW AF1\n20181219,160.89,321.78,388.00\n201
 // 20111021\t55.6\t56.4\t64.3\n
 // 20111022\t54.4\t60.7\t72.4\n`;
 var default_width = 600;
-var default_height = 260;
+var default_height = 600;
 var default_ratio = default_width / default_height;
 
 var margin = {
         top: 10,
-        right: 70,
+        right: 50,
         bottom: 30,
         left: 30
     },
@@ -38,7 +38,7 @@ var margin = {
 
 function scale() {
   current_width = Math.min(600, window.innerWidth * 0.9);
-  current_height = 260;
+  current_height = 600;
 
   current_ratio = current_width / current_height;
 
@@ -85,7 +85,7 @@ var line = d3.svg.line()
         return y(d.price);
     });
 
-var svg = d3.select("#chart").append("svg")
+var svg = d3.select("#industry_chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .style("fill", "white")

@@ -9,8 +9,6 @@
 		<link rel="stylesheet" href="assets/css/chart.css"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
 		<style>
 			svg {
 				font-size: 10px;
@@ -155,7 +153,7 @@
 					</header>
 					<p align="left">
 						<!-- <span class="left" id="chart_div"></span> -->
-						<span id="chart" class="left" style="overflow-x:auto;width:500;height:250"></span>
+						<span id="chart" class="left"></span>
 						The streetwear industry is a multi-billion industry, with the resell market itself currently valued at <b>$2 billion</b> (per <a href = "https://www.businessinsider.com/most-expensive-sneakers-sold-last-year-resale-2019-4" target="_blank">Business Insider)</a>. This number is only growing at an exponential rate: it is projected to hit <b>$6 billion by 2025</b>. <b>Start investing now, you won’t regret it</b>.
 						</br>
 						</br>
@@ -167,11 +165,36 @@
 						<div id="button_text" align="left"></div>
 
 						<script>
-						function reloadJS() {
+						function reloadJSTrackRecord() {
 							var head = document.getElementsByTagName('head')[0];
 							var script = document.createElement('script');
 							script.src = 'assets/js/jquery.sortable.min.js';
 							head.appendChild(script);
+						}
+
+						function reloadJSMarketComparison() {
+							var head = document.getElementsByTagName('head')[0];
+							var script = document.createElement('script');
+							script.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js';
+							head.appendChild(script);
+							var script2 = document.createElement('script');
+							script2.src = 'assets/js/industry_chart.js';
+							head.appendChild(script2);
+							var script3 = document.createElement('script');
+							script3.src = 'assets/js/stock1.js';
+							head.appendChild(script3);
+							var script4 = document.createElement('script');
+							script4.src = 'assets/js/stock2.js';
+							head.appendChild(script4);
+							var script5 = document.createElement('script');
+							script5.src = 'assets/js/stock3.js';
+							head.appendChild(script5);
+							var script6 = document.createElement('script');
+							script6.src = 'assets/js/stock4.js';
+							head.appendChild(script6);
+							var script7 = document.createElement('script');
+							script7.src = 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js';
+							head.appendChild(script7);
 						}
 
 						var nothing = "";
@@ -225,7 +248,15 @@
 						    </table>\
 						</div>'
 						;
-						var text2 = "text2text2text2text2text2text2text2text2text2text2";
+						var text2 = 
+						'<div>\
+							<span id="industry_chart" class="left"></span>\
+							<span id="stock1" class="left"></span>\
+							<span id="stock2" class="left"></span>\
+							<span id="stock3" class="left"></span>\
+							<span id="stock4" class="left"></span>\
+						</div>'
+						;
 
 						function trackRecord() {
 							var x = document.getElementById("button_text");
@@ -235,8 +266,8 @@
 								x.innerHTML = nothing;
 							} else {
 								x.innerHTML = text1;
+								reloadJSTrackRecord();
 							}
-							reloadJS();
 						}
 
 						function marketComparison() {
@@ -248,8 +279,9 @@
 							} else {
 								x.innerHTML = text2;
 							}
-							reloadJS();
+							reloadJSMarketComparison();
 						}
+						
 						</script>
 						</br>
 						Ultimately, the streetwear market is <b>more predictable, less volatile</b>, and thus has a <b>greater potential</b> for profit than other open markets.
@@ -398,7 +430,13 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
 		<script type="text/javascript" src="assets/js/chart.js"></script>
+		<script type="text/javascript" src="assets/js/industry_chart.js"></script>
+		<script type="text/javascript" src="assets/js/stock1"></script>
+		<script type="text/javascript" src="assets/js/stock2"></script>
+		<script type="text/javascript" src="assets/js/stock3"></script>
+		<script type="text/javascript" src="assets/js/stock4"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	    <script src="https://unpkg.com/bootstrap-table@1.15.3/dist/bootstrap-table.min.js"></script>
