@@ -37,7 +37,7 @@ var margin = {
     height = default_height - margin.top - margin.bottom;
 
 function scale() {
-  current_width = Math.min(600, window.innerWidth * 0.9);
+  current_width = Math.min(600, window.innerWidth * 0.45);
   current_height = 260;
 
   current_ratio = current_width / current_height;
