@@ -29,7 +29,7 @@ var default_ratio = default_width / default_height;
 
 var margin = {
         top: 10,
-        right: 50,
+        right: 70,
         bottom: 30,
         left: 30
     },
@@ -37,8 +37,16 @@ var margin = {
     height = default_height - margin.top - margin.bottom;
 
 function scale() {
-  current_width = Math.min(600, window.innerWidth * 0.45);
-  current_height = 260;
+  if (window.innerWidth > 1300) {
+    current_width = window.innerWidth * 0.19;
+    current_height = window.innerWidth * 0.19;
+  } else if (window.innerWidth > 600) {
+    current_width = window.innerWidth * 0.2;
+    current_height = window.innerWidth * 0.2;
+  } else {
+    current_width = window.innerWidth * 0.42;
+    current_height = window.innerWidth * 0.42;
+  }
 
   current_ratio = current_width / current_height;
 
