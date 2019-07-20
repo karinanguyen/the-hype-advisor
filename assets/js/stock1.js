@@ -102,10 +102,6 @@ var svg = d3.select("#stock1").append("svg")
 
 var data = d3.csv.parse(myData)
 
-data.forEach(d => {
-    console.log(d)
-})
-
 color.domain(d3.keys(data[0]).filter(function(key) {
 
     return key !== "date";
@@ -114,8 +110,6 @@ color.domain(d3.keys(data[0]).filter(function(key) {
 data.forEach(function(d) {
     d.date = parseDate(d.date);
 });
-
-// console.log(data)
 
 var cities = color.domain().map(function(name) {
     return {

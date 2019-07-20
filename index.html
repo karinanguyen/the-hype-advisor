@@ -11,7 +11,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 		<style>
 			svg {
-				font-size: 10px;
+				font-size: 9px;
 			}
 			.axis path,
 			.axis line {
@@ -22,9 +22,14 @@
 			.x.axis path {
 				display: none;
 			}
-			.line {
+			.line,
+			.line0,
+			.line1,
+			.line2,
+			.line3,
+			.line4 {
 				fill: none;
-				stroke: steelblue;
+				stroke: red;
 				stroke-width: 1.5px;
 			}
 		</style>
@@ -313,63 +318,15 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
 		<script type="text/javascript" src="assets/js/buttons.js"></script>
 		<script type="text/javascript" src="assets/js/chart.js"></script>
-		<script type="text/javascript" src="assets/js/industry_chart.js"></script>
+<!-- 		<script type="text/javascript" src="assets/js/industry_chart.js"></script>
 		<script type="text/javascript" src="assets/js/stock1"></script>
 		<script type="text/javascript" src="assets/js/stock2"></script>
 		<script type="text/javascript" src="assets/js/stock3"></script>
-		<script type="text/javascript" src="assets/js/stock4"></script>
+		<script type="text/javascript" src="assets/js/stock4"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	    <script src="https://unpkg.com/bootstrap-table@1.15.3/dist/bootstrap-table.min.js"></script>
 	    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	    <script src="assets/js/jquery.sortable.min.js"></script>
-		<!-- 	    <script type="text/javascript">
-				google.charts.load('current', {'packages':['line', 'corechart']});
-				google.charts.setOnLoadCallback(drawChart);
-				function drawChart() {
-					var chartDiv = document.getElementById('chart_div');
-					var data = new google.visualization.DataTable();
-					data.addColumn('date', 'Month');
-					data.addColumn('number', "Apple Stock Price");
-					data.addColumn('number', "OW AF1 Volt Selling Price");
-					data.addRows([
-					[new Date(2019, 0),  184.82, 391.00],
-					[new Date(2019, 0.5),  165.48, 391.00],
-					[new Date(2019, 1),  127.92, 380.00],
-					[new Date(2019, 2),  166.52,  421.00],
-					[new Date(2019, 3), 174.97,  492.00],
-					[new Date(2019, 4), 191.24,  664.00],
-					[new Date(2019, 5), 210.52,  700.00]
-					]);
-					var classicOptions = {
-						title: 'Apple Stock vs. Off-White Nike AF1 (Volt)',
-						width: 500,
-						height: 250,
-						// Gives each series an axis that matches the vAxes number below.
-						series: {
-							0: {targetAxisIndex: 0},
-							1: {targetAxisIndex: 1}
-						},
-						vAxes: {
-							// Adds titles to each axis.
-							0: {title: 'Sold Listing of Shoe (USD)'},
-							1: {title: 'AAPL Stock Price (USD)'}
-						},
-						hAxis: {
-							ticks: [new Date(2019, 0), new Date(2019, 0.5),new Date(2019, 1), new Date(2019, 2), new Date(2019, 3), new Date(2019, 4),  new Date(2019, 5)]
-						},
-						vAxis: {
-							viewWindow: {
-								max: 750
-							}
-						}
-					};
-					function drawClassicChart() {
-						var classicChart = new google.visualization.LineChart(chartDiv);
-						classicChart.draw(data, classicOptions);
-					}
-					drawClassicChart();
-				}
-		</script> -->
 	</body>
 </html>

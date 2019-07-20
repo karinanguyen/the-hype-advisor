@@ -93,7 +93,7 @@ var line = d3.svg.line()
         return y(d.price);
     });
 
-var svg = d3.select("#stock2").append("svg")
+var svg = d3.select("#stock1").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .style("fill", "white")
@@ -101,10 +101,6 @@ var svg = d3.select("#stock2").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var data = d3.csv.parse(myData)
-
-data.forEach(d => {
-    console.log(d)
-})
 
 color.domain(d3.keys(data[0]).filter(function(key) {
 
@@ -114,8 +110,6 @@ color.domain(d3.keys(data[0]).filter(function(key) {
 data.forEach(function(d) {
     d.date = parseDate(d.date);
 });
-
-// console.log(data)
 
 var cities = color.domain().map(function(name) {
     return {
