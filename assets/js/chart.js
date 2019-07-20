@@ -126,7 +126,7 @@ legend.append('rect')
     });
 
 legend.append('text')
-    .attr('x', width - 8)
+    .attr('x', width - 5)
     .attr('y', function(d, i) {
         return (i * 20) + 9;
     }).attr('fill', 'white')

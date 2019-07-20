@@ -1,61 +1,37 @@
-var myData = "date,1x AAPL,2x AAPL,1x OW AF1\n20181219,160.89,321.78,388.00\n20181224,146.83,293.66,353.00\n20181226,157.17,314.34,369.00\n20190102,157.92,315.84,379.00\n20190103,142.19,284.38,382.00\n20190104,148.26,296.52,380.00\n20190129,154.68,309.36,410.00\n20190205,174.18,348.36,431.00\n20190308,172.91,345.82,515.00\n20190321,195.09,390.18,595.00\n20190326,186.79,393.58,613.00\n20190411,198.95,397.90,698.00\n20190416,199.25,399.50,688.00\n20190421,204.53,409.06,730.00\n20190423,207.48,414.96,684.00\n20190430,204.61,409.22,685.00\n20190501,200.67,401.34,700.00\n20190502,209.15,418.30,705.00\n20190503,211.75,423.50,700.00\n";
+var myData2 = "date,Yeezy v2 Cream (Size 6),Travis Scott Jordan 4 (Size 12),Serena OW AM97 (Size 10)\n20190117,292.00,408.00,900.00\n20190122,294.00,416.00,900.00\n20190127,305.00,429.00,915.00\n20190201,298.00,435.00,890.00\n20190206,294.00,426.00,915.00\n20190206,294.00,426.00,915.00\n20190211,293.00,434.00,915.00\n20190216,299.00,475.00,950.00\n20190221,311.00,462.00,950.00\n20190226,354.00,483.00,950.00\n20190301,364.00,450.00,950.00\n20190305,358.00,473.00,950.00\n20190310,355.00,476.00,910.00\n20190315,358.00,500.00,999.00\n20190320,365.00,487.00,999.00\n20190325,377.00,495.00,999.00\n20190330,383.00,474.00,999.00\n20190404,377.00,488.00,1000.00\n20190409,375.00,515.00,907.00\n20190414,377.00,520.00,1080.00\n20190419,358.00,485.00,1080.00\n20190424,355.00,481.00,1080.00\n20190429,351.00,513.00,1035.00\n20190504,360.00,503.00,1121.00\n20190509,367.00,516.00,1113.00\n20190514,368.00,528.00,1141.00\n20190519,367.00,544.00,1063.00\n20190524,375.00,504.00,1095.00\n20190529,391.00,520.00,1134.00\n20190603,376.00,529.00,1134.00\n20190608,393.00,541.00,1134.00/n20190613,394.00,526.00,1150.00/n20190618,395.00,505.00,1150.00\n20190623,388.00,540.00,1150.00\n20190628,400.00,547.00,1150.00\n20190703,415.00,559.00,1200.00\n20190708,419.00,537.00,1200.00\n20190713,408.00,549.00,1200.0\n20190718,418.00,553.00,1200.00";
+var default_width2 = 250;
+var default_height2 = 250;
+var default_ratio2 = default_width2 / default_height2;
 
-// var myData = `date\tNew York\tSan Francisco\tAustin\n
-// 20111001\t63.4\t62.7\t72.2\n
-// 20111002\t58.0\t59.9\t67.7\n
-// 20111003\t53.3\t59.1\t69.4\n
-// 20111004\t55.7\t58.8\t68.0\n
-// 20111005\t64.2\t58.7\t72.4\n
-// 20111006\t58.8\t57.0\t77.0\n
-// 20111007\t57.9\t56.7\t82.3\n
-// 20111008\t61.8\t56.8\t78.9\n
-// 20111009\t59.3\t56.7\t68.8\n
-// 20111010\t71.2\t60.1\t68.7\n
-// 20111011\t68.7\t61.1\t70.3\n
-// 20111012\t61.8\t61.5\t75.3\n
-// 20111013\t63.0\t64.3\t76.6\n
-// 20111014\t66.9\t67.1\t66.6\n
-// 20111015\t61.7\t64.6\t68.0\n
-// 20111016\t61.8\t61.6\t70.6\n
-// 20111017\t62.8\t61.1\t71.1\n
-// 20111018\t60.8\t59.2\t70.0\n
-// 20111019\t62.1\t58.9\t61.6\n
-// 20111020\t65.1\t57.2\t57.4\n
-// 20111021\t55.6\t56.4\t64.3\n
-// 20111022\t54.4\t60.7\t72.4\n`;
-var default_width = 250;
-var default_height = 250;
-var default_ratio = default_width / default_height;
-
-var margin = {
+var margin2 = {
         top: 10,
         right: 70,
         bottom: 30,
         left: 30
     },
-    width = default_width - margin.left - margin.right,
-    height = default_height - margin.top - margin.bottom;
+    width2 = default_width2 - margin2.left - margin2.right,
+    height2 = default_height2 - margin2.top - margin2.bottom;
 
 function scale() {
   if (window.innerWidth > 1300) {
-    current_width = window.innerWidth * 0.19;
-    current_height = window.innerWidth * 0.19;
+    current_width2 = window.innerWidth * 0.19;
+    current_height2 = window.innerWidth * 0.19;
   } else if (window.innerWidth > 600) {
-    current_width = window.innerWidth * 0.2;
-    current_height = window.innerWidth * 0.2;
+    current_width2 = window.innerWidth * 0.2;
+    current_height2 = window.innerWidth * 0.2;
   } else {
-    current_width = window.innerWidth * 0.42;
-    current_height = window.innerWidth * 0.42;
+    current_width2 = window.innerWidth * 0.42;
+    current_height2 = window.innerWidth * 0.42;
   }
 
-  current_ratio = current_width / current_height;
+  current_ratio2 = current_width / current_height;
 
-  if ( current_ratio > default_ratio ){
+  if ( current_ratio2 > default_ratio2 ){
     h = current_height;
-    w = h * default_ratio;
+    w = h * default_ratio2;
   } else {
     w = current_width;
-    h = w / default_ratio;
+    h = w / default_ratio2;
   }
 
   width = w - margin.left - margin.right;
@@ -67,54 +43,54 @@ scale();
 
 var parseDate = d3.time.format("%Y%m%d").parse;
 
-var x = d3.time.scale()
-    .range([0, width]);
+var x2 = d3.time.scale()
+    .range([0, width2]);
 
-var y = d3.scale.linear()
-    .range([height, 0]);
+var y2 = d3.scale.linear()
+    .range([height2, 0]);
 
-var color = d3.scale.category10();
+var color2 = d3.scale.category20();
 
 
-var xAxis = d3.svg.axis()
-    .scale(x)
+var xAxis2 = d3.svg.axis()
+    .scale(x2)
     .orient("bottom");
 
-var yAxis = d3.svg.axis()
-    .scale(y)
+var yAxis2 = d3.svg.axis()
+    .scale(y2)
     .orient("left");
 
-var line = d3.svg.line()
+var line2 = d3.svg.line()
     .interpolate("basis")
     .x(function(d) {
-        return x(d.date);
+        return x2(d.date);
     })
     .y(function(d) {
-        return y(d.price);
+        return y2(d.price);
     });
 
-var svg = d3.select("#stock1").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+var svg2 = d3.select("#stock2").append("svg")
+    .attr("width", width2 + margin2.left + margin2.right)
+    .attr("height", height2 + margin2.top + margin2.bottom)
     .style("fill", "white")
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
-var data = d3.csv.parse(myData)
+var data2 = d3.csv.parse(myData2)
 
-color.domain(d3.keys(data[0]).filter(function(key) {
+color2.domain(d3.keys(data2[0]).filter(function(key) {
 
     return key !== "date";
 }));
 
-data.forEach(function(d) {
+data2.forEach(function(d) {
     d.date = parseDate(d.date);
 });
 
-var cities = color.domain().map(function(name) {
+var cities2 = color2.domain().map(function(name) {
     return {
         name: name,
-        values: data.map(function(d) {
+        values: data2.map(function(d) {
             return {
                 date: d.date,
                 price: +d[name]
@@ -123,42 +99,43 @@ var cities = color.domain().map(function(name) {
     };
 });
 
-x.domain(d3.extent(data, function(d) {
+x2.domain(d3.extent(data2, function(d) {
     return d.date;
 }));
 
-y.domain([
-    d3.min(cities, function(c) {
+y2.domain([
+    d3.min(cities2, function(c) {
         return d3.min(c.values, function(v) {
             return v.price;
         });
     }),
-    d3.max(cities, function(c) {
+    d3.max(cities2, function(c) {
         return d3.max(c.values, function(v) {
             return v.price;
         });
     })
 ]);
 
-var legend = svg.selectAll('g')
-    .data(cities)
+var legend2 = svg2.selectAll('g')
+    .data(cities2)
     .enter()
     .append('g')
-    .attr('class', 'legend')
+    .attr('class', 'legend2')
 
-legend.append('rect')
-    .attr('x', width - 20)
+
+legend2.append('rect')
+    .attr('x', width2 - 20)
     .attr('y', function(d, i) {
         return i * 20;
     })
     .attr('width', 10)
     .attr('height', 10)
     .style('fill', function(d) {
-        return color(d.name);
+        return color2(d.name);
     });
 
-legend.append('text')
-    .attr('x', width - 8)
+legend2.append('text')
+    .attr('x', width2 - 5)
     .attr('y', function(d, i) {
         return (i * 20) + 9;
     }).attr('fill', 'white')
@@ -166,38 +143,38 @@ legend.append('text')
         return d.name;
     });
 
-svg.append("g")
+svg2.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(0," + height2 + ")")
     .style("fill", "white")
-    .call(xAxis);
+    .call(xAxis2);
 
-svg.append("g")
+svg2.append("g")
     .attr("class", "y axis")
-    .call(yAxis)
+    .call(yAxis2)
     .append("text")
     .style("fill", "white")
     .attr("transform", "rotate(-90)")
     .attr("y", 6)
     .attr("dy", ".71em")
     .style("text-anchor", "end")
-    .text("Price (USD): AAPL Stock vs. Off-White Air Force 1 (Volt)");
+    .text("Price (USD) Over Time (Months in 2019)");
 
-var city = svg.selectAll(".city")
-    .data(cities)
+var city2 = svg2.selectAll(".city2")
+    .data(cities2)
     .enter().append("g")
-    .attr("class", "city");
+    .attr("class", "city2");
 
-city.append("path")
-    .attr("class", "line")
+city2.append("path")
+    .attr("class", "line2")
     .attr("d", function(d) {
-        return line(d.values);
+        return line2(d.values);
     })
     .style("stroke", function(d) {
-        return color(d.name);
+        return color2(d.name);
     });
 
-city.append("text")
+city2.append("text")
     .datum(function(d) {
         return {
             name: d.name,
@@ -214,83 +191,83 @@ city.append("text")
         return d.name;
     }).attr('fill', 'white');
 
-var mouseG = svg.append("g")
+var mouseG2 = svg2.append("g")
     .attr("class", "mouse-over-effects");
 
-mouseG.append("path") // this is the black vertical line to follow mouse
-    .attr("class", "mouse-line")
+mouseG2.append("path") // this is the black vertical line2 to follow mouse
+    .attr("class", "mouse-line2")
     .style("stroke", "white")
-    .style("stroke-width", "1px")
+    .style("stroke-width2", "1px")
     .style("opacity", "0");
 
-var lines = document.getElementsByClassName('line');
+var line2s = document.getElementsByClassName('line2');
 
-var mousePerLine = mouseG.selectAll('.mouse-per-line')
-    .data(cities)
+var mousePerline2 = mouseG2.selectAll('.mouse-per-line2')
+    .data(cities2)
     .enter()
     .append("g")
-    .attr("class", "mouse-per-line");
+    .attr("class", "mouse-per-line2");
 
-mousePerLine.append("circle")
+mousePerline2.append("circle")
     .attr("r", 5)
     .style("stroke", function(d) {
-        return color(d.name);
+        return color2(d.name);
     })
     .style("fill", "none")
-    .style("stroke-width", "1px")
+    .style("stroke-width2", "1px")
     .style("opacity", "0");
 
-mousePerLine.append("text")
+mousePerline2.append("text")
     .attr("transform", "translate(10,3)")
     .attr('fill', 'white');
 
-mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
-    .attr('width', width) // can't catch mouse events on a g element
-    .attr('height', height)
+mouseG2.append('svg:rect') // append a rect to catch mouse movements on canvas
+    .attr('width', width2) // can't catch mouse events on a g element
+    .attr('height', height2)
     .attr('fill', 'none')
     .attr('pointer-events', 'all')
-    .on('mouseout', function() { // on mouse out hide line, circles and text
-        d3.select(".mouse-line")
+    .on('mouseout', function() { // on mouse out hide line2, circles and text
+        d3.select(".mouse-line2")
             .style("opacity", "0");
-        d3.selectAll(".mouse-per-line circle")
+        d3.selectAll(".mouse-per-line2 circle")
             .style("opacity", "0");
-        d3.selectAll(".mouse-per-line text")
+        d3.selectAll(".mouse-per-line2 text")
             .style("opacity", "0");
 
     })
-    .on('mouseover', function() { // on mouse in show line, circles and text
-        d3.select(".mouse-line")
+    .on('mouseover', function() { // on mouse in show line2, circles and text
+        d3.select(".mouse-line2")
             .style("opacity", "1");
-        d3.selectAll(".mouse-per-line circle")
+        d3.selectAll(".mouse-per-line2 circle")
             .style("opacity", "1");
-        d3.selectAll(".mouse-per-line text")
+        d3.selectAll(".mouse-per-line2 text")
             .style("opacity", "1");
     })
     .on('mousemove', function() { // mouse moving over canvas
         var mouse = d3.mouse(this);
-        d3.select(".mouse-line")
+        d3.select(".mouse-line2")
             .attr("d", function() {
-                var d = "M" + mouse[0] + "," + height;
+                var d = "M" + mouse[0] + "," + height2;
                 d += " " + mouse[0] + "," + 0;
                 return d;
             });
 
-        d3.selectAll(".mouse-per-line")
+        d3.selectAll(".mouse-per-line2")
             .attr("transform", function(d, i) {
-                console.log(width / mouse[0])
-                var xDate = x.invert(mouse[0]),
+                console.log(width2 / mouse[0])
+                var xDate = x2.invert(mouse[0]),
                     bisect = d3.bisector(function(d) {
                         return d.date;
                     }).right;
                 idx = bisect(d.values, xDate);
 
                 var beginning = 0,
-                    end = lines[i].getTotalLength(),
+                    end = line2s[i].getTotalLength(),
                     target = null;
 
                 while (true) {
                     target = Math.floor((beginning + end) / 2);
-                    pos = lines[i].getPointAtLength(target);
+                    pos = line2s[i].getPointAtLength(target);
                     if ((target === end || target === beginning) && pos.x !== mouse[0]) {
                         break;
                     }
@@ -300,7 +277,7 @@ mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
                 }
 
                 d3.select(this).select('text')
-                    .text(y.invert(pos.y).toFixed(2));
+                    .text(y2.invert(pos.y).toFixed(2));
 
 
                 return "translate(" + mouse[0] + "," + pos.y + ")";

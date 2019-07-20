@@ -1,11 +1,11 @@
 var myData0 = "date,Yeezy v2 Cream (Size 6),Travis Scott Jordan 4 (Size 12),Serena OW AM97 (Size 10)\n20190117,292.00,408.00,900.00\n20190122,294.00,416.00,900.00\n20190127,305.00,429.00,915.00\n20190201,298.00,435.00,890.00\n20190206,294.00,426.00,915.00\n20190206,294.00,426.00,915.00\n20190211,293.00,434.00,915.00\n20190216,299.00,475.00,950.00\n20190221,311.00,462.00,950.00\n20190226,354.00,483.00,950.00\n20190301,364.00,450.00,950.00\n20190305,358.00,473.00,950.00\n20190310,355.00,476.00,910.00\n20190315,358.00,500.00,999.00\n20190320,365.00,487.00,999.00\n20190325,377.00,495.00,999.00\n20190330,383.00,474.00,999.00\n20190404,377.00,488.00,1000.00\n20190409,375.00,515.00,907.00\n20190414,377.00,520.00,1080.00\n20190419,358.00,485.00,1080.00\n20190424,355.00,481.00,1080.00\n20190429,351.00,513.00,1035.00\n20190504,360.00,503.00,1121.00\n20190509,367.00,516.00,1113.00\n20190514,368.00,528.00,1141.00\n20190519,367.00,544.00,1063.00\n20190524,375.00,504.00,1095.00\n20190529,391.00,520.00,1134.00\n20190603,376.00,529.00,1134.00\n20190608,393.00,541.00,1134.00/n20190613,394.00,526.00,1150.00/n20190618,395.00,505.00,1150.00\n20190623,388.00,540.00,1150.00\n20190628,400.00,547.00,1150.00\n20190703,415.00,559.00,1200.00\n20190708,419.00,537.00,1200.00\n20190713,408.00,549.00,1200.0\n20190718,418.00,553.00,1200.00";
 var default_width0 = 600;
 var default_height0 = 600;
-var default_ratio = default_width0 / default_height0;
+var default_ratio0 = default_width0 / default_height0;
 
 var margin0 = {
-        top: 30,
-        right: 120,
+        top: 10,
+        right: 20,
         bottom: 30,
         left: 30
     },
@@ -24,14 +24,14 @@ function scale() {
     current_height0 = window.innerWidth * 0.9;
   }
 
-  current_ratio = current_width0 / current_height0;
+  current_ratio0 = current_width0 / current_height0;
 
-  if ( current_ratio > default_ratio ){
+  if ( current_ratio0 > default_ratio0 ){
     h = current_height0;
-    w = h * default_ratio;
+    w = h * default_ratio0;
   } else {
     w = current_width0;
-    h = w / default_ratio;
+    h = w / default_ratio0;
   }
 
   width0 = w - margin0.left - margin0.right;
@@ -122,8 +122,9 @@ var legend0 = svg0.selectAll('g')
     .append('g')
     .attr('class', 'legend0')
 
+
 legend0.append('rect')
-    .attr('x', width0 - 20)
+    .attr('x', width0 - 110)
     .attr('y', function(d, i) {
         return i * 20;
     })
@@ -134,7 +135,7 @@ legend0.append('rect')
     });
 
 legend0.append('text')
-    .attr('x', width0 - 8)
+    .attr('x', width0 - 95)
     .attr('y', function(d, i) {
         return (i * 20) + 9;
     }).attr('fill', 'white')
