@@ -7,23 +7,31 @@ function reloadJSTrackRecord() {
 
 						function reloadJSMarketComparison() {
 							var head = document.getElementsByTagName('head')[0];
+							var script0 = document.createElement('script');
+							script0.src = 'assets/js/industry_chart.js';
+							head.appendChild(script0);
+							var script1 = document.createElement('script');
+							script1.src = 'assets/js/stock1.js';
+							head.appendChild(script1);
+							var script2 = document.createElement('script');
+							script2.src = 'assets/js/stock2.js';
+							head.appendChild(script2);
+							var script3 = document.createElement('script');
+							script3.src = 'assets/js/stock3.js';
+							head.appendChild(script3);
+							var script4 = document.createElement('script');
+							script4.src = 'assets/js/stock4.js';
+							head.appendChild(script4);
+						}
+
+						function reloadOld() {
+							var head = document.getElementsByTagName('head')[0];
 							var script = document.createElement('script');
 							script.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js';
 							head.appendChild(script);
 							var script2 = document.createElement('script');
-							script2.src = 'assets/js/industry_chart.js';
+							script2.src = 'assets/js/chart.js';
 							head.appendChild(script2);
-							var script3 = document.createElement('script');
-							script3.src = 'assets/js/stock1.js';
-							head.appendChild(script3);
-							var script4 = document.createElement('script');
-							script4.src = 'assets/js/stock2.js';
-							head.appendChild(script4);
-							var script5 = document.createElement('script');
-							script5.src = 'assets/js/stock3.js';
-							head.appendChild(script5);
-							var script6 = document.createElement('script');
-							script6.src = 'assets/js/stock4.js';
 							head.appendChild(script6);
 							var script7 = document.createElement('script');
 							script7.src = 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js';

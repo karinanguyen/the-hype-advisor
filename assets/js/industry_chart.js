@@ -5,8 +5,8 @@ var default_ratio0 = default_width0 / default_height0;
 
 var margin0 = {
         top: 10,
-        right: 20,
-        bottom: 30,
+        right: 30,
+        bottom: 20,
         left: 30
     },
     width0 = default_width0 - margin0.left - margin0.right,
@@ -49,8 +49,7 @@ var x0 = d3.time.scale()
 var y0 = d3.scale.linear()
     .range([height0, 0]);
 
-var color0 = d3.scale.category10();
-
+var color0 = d3.scale.ordinal().range(['#1C5E15', '#2E8223', '#42A733']);
 
 var xAxis0 = d3.svg.axis()
     .scale(x0)

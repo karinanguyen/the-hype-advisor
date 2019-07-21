@@ -5,8 +5,8 @@ var default_ratio1 = default_width1 / default_height1;
 
 var margin1 = {
         top: 10,
-        right: 70,
-        bottom: 30,
+        right: 30,
+        bottom: 20,
         left: 30
     },
     width1 = default_width1 - margin1.left - margin1.right,
@@ -124,7 +124,7 @@ var legend1 = svg1.selectAll('g')
 
 
 legend1.append('rect')
-    .attr('x', width1 - 20)
+    .attr('x', width1 - 80)
     .attr('y', function(d, i) {
         return i * 20;
     })
@@ -135,7 +135,7 @@ legend1.append('rect')
     });
 
 legend1.append('text')
-    .attr('x', width1 - 5)
+    .attr('x', width1 - 65)
     .attr('y', function(d, i) {
         return (i * 20) + 9;
     }).attr('fill', 'white')
