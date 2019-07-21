@@ -116,7 +116,7 @@ function reloadJSTrackRecord() {
 							        <td>2</td>\
 							        <td>$573</td>\
 							        <td>12/21/18</td>\
-							        <td>$1,227.00</td>\
+							        <td>$1,227</td>\
 							        <td>3/15/19</td>\
 							        <td>03 months</td>\
 							        <td>$196</td>\
@@ -146,7 +146,7 @@ function reloadJSTrackRecord() {
 							        <td>6/4/19</td>\
 							        <td>06 months</td>\
 							        <td>$272</td>\
-							        <td><font color="#11d128">$2,216.00</font></td>\
+							        <td><font color="#11d128">$2,216</font></td>\
 							        <td><font color="#11d128">$1,944</font></td>\
 							        <td><font color="#11d128">164%</font></td>\
 							      </tr>\
@@ -159,7 +159,7 @@ function reloadJSTrackRecord() {
 							        <td>4/1/19</td>\
 							        <td>13 months</td>\
 							        <td>$176</td>\
-							        <td><font color="#11d128">$730.00</font></td>\
+							        <td><font color="#11d128">$730</font></td>\
 							        <td><font color="#11d128">$554</font></td>\
 							        <td><font color="#11d128">38%</font></td>\
 							      </tr>\
@@ -172,7 +172,7 @@ function reloadJSTrackRecord() {
 							        <td>7/14/19</td>\
 							        <td>02 months</td>\
 							        <td>$192</td>\
-							        <td><font color="#11d128">$1,200.00</font></td>\
+							        <td><font color="#11d128">$1,200</font></td>\
 							        <td><font color="#11d128">$1,008</font></td>\
 							        <td><font color="#11d128">84%</font></td>\
 							      </tr>\
@@ -192,9 +192,9 @@ function reloadJSTrackRecord() {
 							      <tr>\
 							        <td>Raptor OVO Air Jordan 4</td>\
 							        <td>1</td>\
-							        <td>$375.00</td>\
+							        <td>$375</td>\
 							        <td>6/13/19</td>\
-							        <td>$225.00</td>\
+							        <td>$225</td>\
 							        <td>7/14/19</td>\
 							        <td>02 months</td>\
 							        <td>$18</td>\
@@ -205,24 +205,35 @@ function reloadJSTrackRecord() {
 							    </tbody>\
 						    </table>\
 						</div>\
-						Above is the <b>complete portfolio</b> of investments we have made as a unified team<sup>*</sup>.\
-						The more confident we are in a certain streetwear item, the more we invest. Whether it be one month or one year investments, the majority of items are profitable, with ROI’s ranging from 18% to 164% after transaction fees. In the bigger picture, the positives outweigh the negatives, resulting in a consistent net profit in our diverse portfolio.\
+						</br>\
+						Above is the <b>complete portfolio</b> of investments we have made as a collective<sup>*</sup>.\
+						The more confident we are in a certain streetwear item, the more we invest. Whether it be one month or one year investments, the majority of the items that we have held have proven to be profitable, with ROI’s ranging from 18% to 164% after transaction fees. In the bigger picture, the positives outweigh the negatives, resulting in a consistent net profit in our diverse portfolio.\
 						</br>\
 						</br>\
-						<div class="asterisk"><sup>*</sup>Prior investments, which are made by each of the operations team members in the past five years, are uncharted.</div>\
+						Note that we calculated our final numbers by including an average 8% fee that transactions incur, but even with fees, streetwear can turn extremely large profit margins.\
+						</br>\
+						</br>\
+						<div class="asterisk"><sup>*</sup>Prior investments made by team members independently are uncharted.</div>\
 						</br>'
 						;
 						var text2 = 
 						'<div>\
 							<span id="industry_chart" class="left"></span>\
-							<div>\
-								<span id="stock1"></span>\
-								<span id="stock2"></span>\
-							</div>\
-							<div>\
-								<span id="stock3"></span>\
-								<span id="stock4"></span>\
-							</div>\
+						<div>\
+							<span id="stock1"></span>\
+							<span id="stock2"></span>\
+						</div>\
+						<div>\
+							<span id="stock3"></span>\
+							<span id="stock4"></span>\
+						</br>\
+						</br>\
+						</div>\
+						The charts above display trends in streetwear items and stocks within the time span of six months. The streetwear items are all past investments on our track record and represent an average investment that we would make. For comparison, we wanted to provide an unbiased representation of the stock market, so we chose the three largest companies by market capitalization from a variety of sectors: consumer technology, automobile, and bio-technology. These sectors, which are growing at an exponential rate, best represent popular material goods that are comparable to streetwear. We also included the S&P500, NASDAQ, and Dow Jones, which provide a holistic perspective of the stock market.\
+						</br>\
+						</br>\
+						There is no way to measure the ROI of the streetwear market as a whole, but if chosen correctly, many items consistently match or exceed those of the stock market. Based on the calculations displayed above, as well as some of the numbers from our track record of “flips” (click the “Track Record” button above) the ROI of streetwear items can be much greater. In addition to exhibiting steeper positive trends, the streetwear market experiences smaller fluctuations, indicating less volatility and more predictability.\
+						</br>\
 						</div>'
 						;
 
