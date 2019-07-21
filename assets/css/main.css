@@ -222,7 +222,7 @@ input, select, textarea {
 
 	.asterisk {
 		font-size: 0.7em;
-		text-align: right;
+		text-align: left;
 	}
 
 	.align-left {
