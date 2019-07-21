@@ -4,7 +4,7 @@ var default_height0 = 600;
 var default_ratio0 = default_width0 / default_height0;
 
 var margin0 = {
-        top: 10,
+        top: 40,
         right: 30,
         bottom: 20,
         left: 30
@@ -17,8 +17,8 @@ function scale() {
     current_width0 = window.innerWidth * 0.42;
     current_height0 = window.innerWidth * 0.42;
   } else if (window.innerWidth > 600) {
-    current_width0 = window.innerWidth * 0.45;
-    current_height0 = window.innerWidth * 0.45;
+    current_width0 = window.innerWidth * 0.46;
+    current_height0 = window.innerWidth * 0.46;
   } else {
     current_width0 = window.innerWidth * 0.9;
     current_height0 = window.innerWidth * 0.9;
@@ -151,13 +151,13 @@ svg0.append("g")
 svg0.append("g")
     .attr("class", "y axis")
     .call(yAxis0)
-    .append("text")
-    .style("fill", "white")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
-    .text("Price (USD) Over Time (Months in 2019)");
+
+svg0.append("text")
+        .attr("x", (width0 / 2))             
+        .attr("y", 0 - (margin0.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", width0 / 30) 
+        .text("Price (USD) over Time: Streetwear (Sneakers)");
 
 var city0 = svg0.selectAll(".city0")
     .data(cities0)

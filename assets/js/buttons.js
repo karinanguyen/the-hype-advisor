@@ -204,7 +204,14 @@ function reloadJSTrackRecord() {
 							      </tr>\
 							    </tbody>\
 						    </table>\
-						</div>'
+						</div>\
+						Above is a complete portfolio of the investments we have made as a unified team<sup>*</sup>.\
+						</br>\
+						</br>\
+						The more confident we are in a certain streetwear item, the more we invest. Whether it be one month or one year investments, the majority of items are profitable, with ROI’s all ranging from 18% to 164% after transaction fees . In the bigger picture, the positives outweigh the negatives, resulting in a consistent net profit in our diverse portfolio.\
+						</br>\
+						<div class="asterisk"><sup>*</sup>Prior investments, which are made by each of the operations team members in the past five years, are uncharted.</div>\
+						</br>'
 						;
 						var text2 = 
 						'<div>\

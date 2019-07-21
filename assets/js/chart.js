@@ -4,7 +4,7 @@ var default_height = 260;
 var default_ratio = default_width / default_height;
 
 var margin = {
-        top: 10,
+        top: 60,
         right: 80,
         bottom: 30,
         left: 30
@@ -116,13 +116,13 @@ svg.append("g")
 svg.append("g")
     .attr("class", "y axis")
     .call(yAxis)
-    .append("text")
-    .style("fill", "white")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
-    .text("Price (USD): AAPL Stock vs. Off-White Air Force 1 (Volt)");
+
+svg.append("text")
+        .attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", width / 27) 
+        .text("Price (USD) over Time: Apple Stock vs. Off-White Air Force 1 Volt");
 
 var city = svg.selectAll(".city")
     .data(cities)

@@ -1,10 +1,10 @@
 var myData4 = "date,Yeezy v2 Cream (Size 6),Travis Scott Jordan 4 (Size 12),Serena OW AM97 (Size 10)\n20190117,292.00,408.00,900.00\n20190122,294.00,416.00,900.00\n20190127,305.00,429.00,915.00\n20190201,298.00,435.00,890.00\n20190206,294.00,426.00,915.00\n20190206,294.00,426.00,915.00\n20190211,293.00,434.00,915.00\n20190216,299.00,475.00,950.00\n20190221,311.00,462.00,950.00\n20190226,354.00,483.00,950.00\n20190301,364.00,450.00,950.00\n20190305,358.00,473.00,950.00\n20190310,355.00,476.00,910.00\n20190315,358.00,500.00,999.00\n20190320,365.00,487.00,999.00\n20190325,377.00,495.00,999.00\n20190330,383.00,474.00,999.00\n20190404,377.00,488.00,1000.00\n20190409,375.00,515.00,907.00\n20190414,377.00,520.00,1080.00\n20190419,358.00,485.00,1080.00\n20190424,355.00,481.00,1080.00\n20190429,351.00,513.00,1035.00\n20190504,360.00,503.00,1121.00\n20190509,367.00,516.00,1113.00\n20190514,368.00,528.00,1141.00\n20190519,367.00,544.00,1063.00\n20190524,375.00,504.00,1095.00\n20190529,391.00,520.00,1134.00\n20190603,376.00,529.00,1134.00\n20190608,393.00,541.00,1134.00/n20190613,394.00,526.00,1150.00/n20190618,395.00,505.00,1150.00\n20190623,388.00,540.00,1150.00\n20190628,400.00,547.00,1150.00\n20190703,415.00,559.00,1200.00\n20190708,419.00,537.00,1200.00\n20190713,408.00,549.00,1200.0\n20190718,418.00,553.00,1200.00";
 var default_width4 = 250;
-var default_height4 = 250;
+var default_height4 = 280;
 var default_ratio4 = default_width4 / default_height4;
 
 var margin4 = {
-        top: 10,
+        top: 30,
         right: 30,
         bottom: 20,
         left: 30
@@ -14,28 +14,28 @@ var margin4 = {
 
 function scale() {
   if (window.innerWidth > 1300) {
-    current_width4 = window.innerWidth * 0.19;
-    current_height4 = window.innerWidth * 0.19;
+    current_width4 = window.innerWidth * 0.21;
+    current_height4 = window.innerWidth * 0.21;
   } else if (window.innerWidth > 600) {
-    current_width4 = window.innerWidth * 0.2;
-    current_height4 = window.innerWidth * 0.2;
+    current_width4 = window.innerWidth * 0.23;
+    current_height4 = window.innerWidth * 0.23;
   } else {
-    current_width4 = window.innerWidth * 0.42;
-    current_height4 = window.innerWidth * 0.42;
+    current_width4 = window.innerWidth * 0.45;
+    current_height4 = window.innerWidth * 0.45;
   }
 
-  current_ratio4 = current_width / current_height;
+  current_ratio4 = current_width4 / current_height4;
 
   if ( current_ratio4 > default_ratio4 ){
-    h = current_height;
+    h = current_height4;
     w = h * default_ratio4;
   } else {
-    w = current_width;
+    w = current_width4;
     h = w / default_ratio4;
   }
 
-  width = w - margin.left - margin.right;
-  height = h - margin.top - margin.bottom;
+  width4 = w - margin4.left - margin4.right;
+  height4 = h - margin4.top - margin4.bottom;
 
 };
 
@@ -49,14 +49,13 @@ var x4 = d3.time.scale()
 var y4 = d3.scale.linear()
     .range([height4, 0]);
 
-var color3 = d3.scale.category20b();
+var color4 = d3.scale.category20b();
 
-
-var xAxis3 = d3.svg.axis()
+var xAxis4 = d3.svg.axis()
     .scale(x4)
     .orient("bottom");
 
-var yAxis3 = d3.svg.axis()
+var yAxis4 = d3.svg.axis()
     .scale(y4)
     .orient("left");
 
@@ -78,7 +77,7 @@ var svg4 = d3.select("#stock3").append("svg")
 
 var data4 = d3.csv.parse(myData4)
 
-color3.domain(d3.keys(data4[0]).filter(function(key) {
+color4.domain(d3.keys(data4[0]).filter(function(key) {
 
     return key !== "date";
 }));
@@ -87,7 +86,7 @@ data4.forEach(function(d) {
     d.date = parseDate(d.date);
 });
 
-var cities4 = color3.domain().map(function(name) {
+var cities4 = color4.domain().map(function(name) {
     return {
         name: name,
         values: data4.map(function(d) {
@@ -131,7 +130,7 @@ legend4.append('rect')
     .attr('width', 10)
     .attr('height', 10)
     .style('fill', function(d) {
-        return color3(d.name);
+        return color4(d.name);
     });
 
 legend4.append('text')
@@ -147,18 +146,18 @@ svg4.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height4 + ")")
     .style("fill", "white")
-    .call(xAxis3);
+    .call(xAxis4);
 
 svg4.append("g")
     .attr("class", "y axis")
-    .call(yAxis3)
-    .append("text")
-    .style("fill", "white")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
-    .text("Price (USD) Over Time (Months in 2019)");
+    .call(yAxis4)
+
+svg4.append("text")
+        .attr("x", (width4 / 2))             
+        .attr("y", 0 - (margin4.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", width4 / 15) 
+        .text("Stock Prices (Indeces)");
 
 var city4 = svg4.selectAll(".city4")
     .data(cities4)
@@ -171,7 +170,7 @@ city4.append("path")
         return line4(d.values);
     })
     .style("stroke", function(d) {
-        return color3(d.name);
+        return color4(d.name);
     });
 
 city4.append("text")
@@ -211,7 +210,7 @@ var mousePerline4 = mouseG4.selectAll('.mouse-per-line4')
 mousePerline4.append("circle")
     .attr("r", 5)
     .style("stroke", function(d) {
-        return color3(d.name);
+        return color4(d.name);
     })
     .style("fill", "none")
     .style("stroke-width4", "1px")

@@ -1,10 +1,10 @@
 var myData1 = "date,Yeezy v2 Cream (Size 6),Travis Scott Jordan 4 (Size 12),Serena OW AM97 (Size 10)\n20190117,292.00,408.00,900.00\n20190122,294.00,416.00,900.00\n20190127,305.00,429.00,915.00\n20190201,298.00,435.00,890.00\n20190206,294.00,426.00,915.00\n20190206,294.00,426.00,915.00\n20190211,293.00,434.00,915.00\n20190216,299.00,475.00,950.00\n20190221,311.00,462.00,950.00\n20190226,354.00,483.00,950.00\n20190301,364.00,450.00,950.00\n20190305,358.00,473.00,950.00\n20190310,355.00,476.00,910.00\n20190315,358.00,500.00,999.00\n20190320,365.00,487.00,999.00\n20190325,377.00,495.00,999.00\n20190330,383.00,474.00,999.00\n20190404,377.00,488.00,1000.00\n20190409,375.00,515.00,907.00\n20190414,377.00,520.00,1080.00\n20190419,358.00,485.00,1080.00\n20190424,355.00,481.00,1080.00\n20190429,351.00,513.00,1035.00\n20190504,360.00,503.00,1121.00\n20190509,367.00,516.00,1113.00\n20190514,368.00,528.00,1141.00\n20190519,367.00,544.00,1063.00\n20190524,375.00,504.00,1095.00\n20190529,391.00,520.00,1134.00\n20190603,376.00,529.00,1134.00\n20190608,393.00,541.00,1134.00/n20190613,394.00,526.00,1150.00/n20190618,395.00,505.00,1150.00\n20190623,388.00,540.00,1150.00\n20190628,400.00,547.00,1150.00\n20190703,415.00,559.00,1200.00\n20190708,419.00,537.00,1200.00\n20190713,408.00,549.00,1200.0\n20190718,418.00,553.00,1200.00";
 var default_width1 = 250;
-var default_height1 = 250;
+var default_height1 = 280;
 var default_ratio1 = default_width1 / default_height1;
 
 var margin1 = {
-        top: 10,
+        top: 30,
         right: 30,
         bottom: 20,
         left: 30
@@ -14,28 +14,28 @@ var margin1 = {
 
 function scale() {
   if (window.innerWidth > 1300) {
-    current_width1 = window.innerWidth * 0.19;
-    current_height1 = window.innerWidth * 0.19;
+    current_width1 = window.innerWidth * 0.21;
+    current_height1 = window.innerWidth * 0.21;
   } else if (window.innerWidth > 600) {
-    current_width1 = window.innerWidth * 0.2;
-    current_height1 = window.innerWidth * 0.2;
+    current_width1 = window.innerWidth * 0.23;
+    current_height1 = window.innerWidth * 0.23;
   } else {
-    current_width1 = window.innerWidth * 0.42;
-    current_height1 = window.innerWidth * 0.42;
+    current_width1 = window.innerWidth * 0.45;
+    current_height1 = window.innerWidth * 0.45;
   }
 
-  current_ratio1 = current_width / current_height;
+  current_ratio1 = current_width1 / current_height1;
 
   if ( current_ratio1 > default_ratio1 ){
-    h = current_height;
+    h = current_height1;
     w = h * default_ratio1;
   } else {
-    w = current_width;
+    w = current_width1;
     h = w / default_ratio1;
   }
 
-  width = w - margin.left - margin.right;
-  height = h - margin.top - margin.bottom;
+  width1 = w - margin1.left - margin1.right;
+  height1 = h - margin1.top - margin1.bottom;
 
 };
 
@@ -152,13 +152,13 @@ svg1.append("g")
 svg1.append("g")
     .attr("class", "y axis")
     .call(yAxis1)
-    .append("text")
-    .style("fill", "white")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
-    .text("Price (USD) Over Time (Months in 2019)");
+
+svg1.append("text")
+        .attr("x", (width1 / 2))             
+        .attr("y", 0 - (margin1.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", width1 / 15) 
+        .text("Stock Prices (Consumer Technology)");
 
 var city1 = svg1.selectAll(".city1")
     .data(cities1)
