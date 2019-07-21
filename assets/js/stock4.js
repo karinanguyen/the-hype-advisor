@@ -49,7 +49,7 @@ var x4 = d3.time.scale()
 var y4 = d3.scale.linear()
     .range([height4, 0]);
 
-var color4 = d3.scale.ordinal().range(["#70685C", "#A89C8C", "#E4D4BF"])
+var color4 = d3.scale.ordinal().range(["#C11C23", "#D54237", "#E5634F"])
 
 var xAxis4 = d3.svg.axis()
     .scale(x4)
