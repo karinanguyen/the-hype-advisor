@@ -165,7 +165,7 @@ svg2.append("text")
         .attr("y", height2 + 40)
         .attr("text-anchor", "middle")  
         .style("font-size", width2 / 15) 
-        .text("JNJ: 0.9%, ROG: 4.2%, NVSL 15.5%");
+        .text("JNJ: 0.9%, ROG: 4.2%, NVS: 15.5%");
 
 var city2 = svg2.selectAll(".city2")
     .data(cities2)
