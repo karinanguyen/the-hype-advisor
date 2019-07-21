@@ -214,6 +214,7 @@ Note that we calculated our final numbers by including an average 8% fee that tr
 </br>\
 </br>\
 <div class="asterisk"><sup>*</sup>Prior investments made by team members independently are uncharted.</div>\
+</br>\
 </br>'
 ;
 var text2 = 
@@ -233,6 +234,8 @@ The charts display trends in streetwear items and stocks within the time span of
 </br>\
 </br>\
 There is no way to measure the ROI of the streetwear market as a whole, but if chosen correctly, many items consistently match or exceed those of the stock market. Based on the calculations displayed above, as well as some of the numbers from our track record of “flips” (click the “Track Record” button above) the ROI of streetwear items can be much greater. In addition to exhibiting steeper positive trends, the streetwear market experiences smaller fluctuations, indicating less volatility and more predictability.\
+</br>\
+</br>\
 </br>\
 </div>'
 ;
