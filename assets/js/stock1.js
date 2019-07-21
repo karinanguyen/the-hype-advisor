@@ -6,7 +6,7 @@ var default_ratio1 = default_width1 / default_height1;
 var margin1 = {
         top: 30,
         right: 30,
-        bottom: 20,
+        bottom: 60,
         left: 30
     },
     width1 = default_width1 - margin1.left - margin1.right,
@@ -160,6 +160,13 @@ svg1.append("text")
         .style("font-size", width1 / 15) 
         .text("Stock Prices (Consumer Technology)");
 
+svg1.append("text")
+        .attr("x", (width1 / 2))             
+        .attr("y", height1 + 40)
+        .attr("text-anchor", "middle")  
+        .style("font-size", width1 / 15) 
+        .text("AAPL: 29.7%, MSFT: 26.5%, GOOGLE: 3.6%");
+        
 var city1 = svg1.selectAll(".city1")
     .data(cities1)
     .enter().append("g")

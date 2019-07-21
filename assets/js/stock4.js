@@ -6,7 +6,7 @@ var default_ratio4 = default_width4 / default_height4;
 var margin4 = {
         top: 30,
         right: 30,
-        bottom: 20,
+        bottom: 60,
         left: 30
     },
     width4 = default_width4 - margin4.left - margin4.right,
@@ -158,6 +158,13 @@ svg4.append("text")
         .attr("text-anchor", "middle")  
         .style("font-size", width4 / 15) 
         .text("Stock Prices (Indices)");
+
+svg4.append("text")
+        .attr("x", (width4 / 2))             
+        .attr("y", height4 + 40)
+        .attr("text-anchor", "middle")  
+        .style("font-size", width4 / 15) 
+        .text("S&P: 12.5%, NASDAQ: 16.04%, DJI: 11.27%");
 
 var city4 = svg4.selectAll(".city4")
     .data(cities4)

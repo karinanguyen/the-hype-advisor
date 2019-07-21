@@ -6,7 +6,7 @@ var default_ratio3 = default_width3 / default_height3;
 var margin3 = {
         top: 30,
         right: 30,
-        bottom: 20,
+        bottom: 60,
         left: 30
     },
     width3 = default_width3 - margin3.left - margin3.right,
@@ -158,6 +158,13 @@ svg3.append("text")
         .attr("text-anchor", "middle")  
         .style("font-size", width3 / 15) 
         .text("Stock Prices (Automotive)");
+
+svg3.append("text")
+        .attr("x", (width3 / 2))             
+        .attr("y", height3 + 40)
+        .attr("text-anchor", "middle")  
+        .style("font-size", width3 / 15) 
+        .text("TSLA: -15.68%, VYAPM: 4.7% TM: 3.2%");
 
 var city3 = svg3.selectAll(".city3")
     .data(cities3)

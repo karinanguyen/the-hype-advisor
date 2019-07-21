@@ -6,7 +6,7 @@ var default_ratio2 = default_width2 / default_height2;
 var margin2 = {
         top: 30,
         right: 30,
-        bottom: 20,
+        bottom: 60,
         left: 30
     },
     width2 = default_width2 - margin2.left - margin2.right,
@@ -159,6 +159,13 @@ svg2.append("text")
         .attr("text-anchor", "middle")  
         .style("font-size", width2 / 15) 
         .text("Stock Prices (Biotech)");
+
+svg2.append("text")
+        .attr("x", (width2 / 2))             
+        .attr("y", height2 + 40)
+        .attr("text-anchor", "middle")  
+        .style("font-size", width2 / 15) 
+        .text("JNJ: 0.9%, ROG: 4.2%, NVSL 15.5%");
 
 var city2 = svg2.selectAll(".city2")
     .data(cities2)
