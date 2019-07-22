@@ -206,14 +206,14 @@ var text1 =
     </table>\
 </div>\
 </br>\
-Above is the <b>complete portfolio</b> of investments we have made as a collective<sup>*</sup>.\
+Above is the <b>complete portfolio</b> of investments we have made as a collective<sup>4</sup>.\
 The more confident we are in a certain streetwear item, the more we invest. Whether it be one month or one year investments, the majority of the items that we have held have proven to be profitable, with ROI’s ranging from 18% to 164% after transaction fees. In the bigger picture, the positives outweigh the negatives, resulting in a consistent net profit in our diverse portfolio.\
 </br>\
 </br>\
 Note that we calculated our final numbers by including an average 8% fee that transactions incur, but even with fees, streetwear can turn extremely large profit margins.\
 </br>\
 </br>\
-<div class="asterisk"><sup>*</sup>Prior investments made by team members independently are uncharted.</div>\
+<div class="asterisk"><sup>4</sup>Prior investments made by team members independently are uncharted.</div>\
 </br>\
 </br>'
 ;
