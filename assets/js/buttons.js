@@ -210,7 +210,7 @@ Above is the <b>complete portfolio</b> of investments we have made as a collecti
 The more confident we are in a certain streetwear item, the more we invest. Whether it be one month or one year investments, the majority of the items that we have held have proven to be profitable, with ROI’s ranging from 18% to 164% after transaction fees. In the bigger picture, the positives outweigh the negatives, resulting in a consistent net profit in our diverse portfolio.\
 </br>\
 </br>\
-Note that we calculated our final numbers by including an average 8% fee that transactions incur, but even with fees, streetwear can turn extremely large profit margins.\
+Note that we calculated our final numbers by including an average 8% fee that transactions incur. Even with fees, however, streetwear can still turn extremely large profit margins.\
 </br>\
 </br>\
 <div class="asterisk"><sup>4</sup>Prior investments made by team members independently are uncharted.</div>\
@@ -230,10 +230,10 @@ var text2 =
 </br>\
 </br>\
 </div>\
-The charts display trends in streetwear items and stocks within the time span of six months. The streetwear items are all past investments on our track record and represent an average investment that we would make. For comparison, we wanted to provide an unbiased representation of the stock market, so we chose the three largest companies by market capitalization from a variety of sectors: consumer technology, automobile, and bio-technology. These sectors, which are growing at an exponential rate, best represent popular material goods that are comparable to streetwear. We also included the S&P500, NASDAQ, and Dow Jones, which provide a holistic perspective of the stock market.\
+The charts above display trends in streetwear items and stocks within six months. The streetwear items, which we display by utilizing <b><a href="https://stockx.com" target="_blank">StockX</a> market prices</b>, are all past investments we have made. For comparison, we provide an <b>unbiased representation of the stock market</b>, so we choose the three largest companies by market capitalization from a variety of sectors: consumer technology, automobile, and bio-technology. These sectors best represent popular material goods that are comparable to streetwear. We also included S&P500, NASDAQ, and Dow Jones, which provide a holistic perspective of the stock market.\
 </br>\
 </br>\
-There is no way to measure the ROI of the streetwear market as a whole, but if chosen correctly, many items consistently match or exceed those of the stock market. Based on the calculations displayed above, as well as some of the numbers from our track record of “flips” (click the “Track Record” button above) the ROI of streetwear items can be much greater. In addition to exhibiting steeper positive trends, the streetwear market experiences smaller fluctuations, indicating less volatility and more predictability.\
+When choosing to buy and sell at the right time frame, many items consistently match or exceed those of the stock market. Based on the calculations displayed above as well as the numbers from our track record of “flips” (click the <b>“Track Record” button</b>), the ROI of streetwear items is often greater. In addition to exhibiting <b>steeper positive trends</b>, the streetwear market experiences <b>smaller fluctuations</b>, indicating less volatility and more predictability. \
 </br>\
 </br>\
 </br>\

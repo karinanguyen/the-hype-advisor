@@ -112,8 +112,23 @@ input, select, textarea {
 	}
 
 		a:hover {
-			color: #e85151 !important;
-			border-bottom-color: transparent;
+			color: #ffffff !important;
+			border-bottom: dotted 1px;
+		}
+
+	.style2 a{
+		-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		border-bottom: dotted 1px;
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+		.style2 a:hover {
+			color: #000000 !important;
+			border-bottom: dotted 1px;
 		}
 
 	strong, b {
