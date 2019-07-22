@@ -113,7 +113,6 @@ input, select, textarea {
 
 		a:hover {
 			color: #ffffff !important;
-			border-bottom: dotted 1px;
 		}
 
 	.style2 a{
@@ -128,7 +127,6 @@ input, select, textarea {
 
 		.style2 a:hover {
 			color: #000000 !important;
-			border-bottom: dotted 1px;
 		}
 
 
